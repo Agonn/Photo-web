@@ -11,20 +11,20 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style>
 .slider-adjustment{
- position: fixed;
+
   top: 56px;  
   left: 0;
   bottom: 0;
   right: 0;
   overflow: auto;
-background-color:cyan ;
-
+  background-color:cyan ;
 }
+
     </style>
 </head>
 <body>
   <!-- nav !-->
-<ul id="slide-out" class="side-nav">
+<ul id="slide-out" style="z-index: 10001;"class="side-nav">
     <li><div class="user-view">
       <div class="background">
         <img src="http://i.imgur.com/WeXE1wq.png">
@@ -42,7 +42,8 @@ background-color:cyan ;
     <li><a href="#!"><img src="images/snapchat.png">AstritiSnapchat</a></li>
     
   </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="medium material-icons">menu</i></a>
+  <a href="#" data-activates="slide-out" style="position: absolute;
+    z-index: 10000" class="button-collapse"><i class="medium material-icons">menu</i></a>
   <!-- /Nav !-->
   <!-- Content !-->
 <div class="slider-adjustment">
@@ -52,22 +53,22 @@ background-color:cyan ;
     <li>
       <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="> <!-- random image -->
       <div class="caption center-align">
-        <h3>This is our big Tagline!</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <h3>Astrit Istogu</h3>
+        <h5 class="light grey-text text-lighten-3">Photography</h5>
       </div>
     </li>
     <li>
       <img src="https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&fm=jpg&s=0e993004a2f3704e8f2ad5469315ccb7"> <!-- random image -->
       <div class="caption left-align">
-        <h3>Left Aligned Caption</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <h3>Galeria</h3>
+        <h5 class="light grey-text text-lighten-3">Kontakti</h5>
       </div>
     </li>
     <li>
       <img src="https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5"> <!-- random image -->
       <div class="caption right-align">
-        <h3>Right Aligned Caption</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <h3>Test</h3>
+        <h5 class="light grey-text text-lighten-3">Instagram</h5>
       </div>
     </li>
   </ul>
