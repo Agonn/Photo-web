@@ -7971,7 +7971,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .slider .indicators .indicator-item.active {
-  background-color: #4CAF50;
+  background-color: #4a148c;
 }
 
 .carousel {
