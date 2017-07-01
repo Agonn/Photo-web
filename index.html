@@ -84,10 +84,10 @@
       <i class="large material-icons">picture_in_picture</i>
     </a>
     <ul>
-      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">insert_chart</i>Matura</a></li>
-      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">format_quote</i>Natyra</a></li>
-      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">publish</i>Portrete</a></li>
-      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">attach_file</i>Te Ndryshme</a></li>
+      <li class="waves-effect waves-light"><a href="#test"><i class="material-icons">aspect_ratio</i>Matura</a></li>
+      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">settings_brightness</i>Natyra</a></li>
+      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">perm_identity</i>Portrete</a></li>
+      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">movie</i>Te Ndryshme</a></li>
     </ul>
   </div>
 
@@ -102,7 +102,12 @@
       $('.slider').slider();
     });
 
-      $('.button-collapse').sideNav('show');
+ $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true
+ });
 
       
 </script>
