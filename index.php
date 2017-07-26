@@ -1,3 +1,37 @@
+<?php require_once( 'couch/cms.php' ); ?>
+<cms:template title="Faqja kryesore">
+<cms:editable name='prop_uploads' label='Fotot ne background' desc='Fotot ne prapavije - Faqja kryesore' type='group' />
+
+<cms:editable name='image_1' label='Foto per faqen e pare'  show_preview='1' preview_width='250'
+    group='prop_uploads'
+    type='image' />
+
+    <cms:editable name='image_2' label='Foto per faqen e dyte'  show_preview='1' preview_width='250'
+''    group='prop_uploads'
+    type='image' />
+
+    
+    <cms:editable name='image_3' label='Foto per faqen e trete'  show_preview='1' preview_width='250'
+    group='prop_uploads'
+    type='image' />
+
+    <cms:editable name='image_1_text' group='prop_uploads' label='Titulli per slide 1' desc='Shkruani titullin per slide 1'
+    maxlength='20'
+    type='text' />
+
+
+       <cms:editable name='image_2_text' group='prop_uploads' label='Titulli per slide 2' desc='Shkruani titullin per slide 2'
+    maxlength='20'
+    type='text' />
+
+       <cms:editable name='image_3_text' group='prop_uploads' label='Titulli per slide 3' desc='Shkruani titullin per slide 3'
+    maxlength='20'
+    type='text' />
+
+</cms:template>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +45,15 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style>
 .slider-adjustment{
-
   top: 56px;  
   left: 0;
   bottom: 0;
   right: 0;
   overflow: auto;
   background-color:cyan ;
+}
+.fixed-action-btn.toolbar ul li a:hover {
+  background-color:purple;
 }
 
     </style>
@@ -37,9 +73,9 @@
     <li><a href="mailto:astritiistogu@gmail.com"><i class="material-icons">email</i>astritiistogu@gmail.com</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Social Media</a></li>
-    <li><a href="https://www.instagram.com/astritistoguphotography/"><img src="images/insta.png">Astritistoguphotography</a></li>
-    <li><a href="https://www.instagram.com/astritistoguphotography/"><img src="images/fb.png">Astritistoguphotography</a></li>
-    <li><a href="#!"><img src="images/snapchat.png">AstritiSnapchat</a></li>
+    <li><a href="https://www.instagram.com/astritistoguphotography/" target='_blank'><img src="images/insta.png">Astritistoguphotography</a></li>
+    <li><a href="https://www.facebook.com/astrit.istogu/photos_all" target='_blank'><img src="images/fb.png">Astritistoguphotography</a></li>
+    <!--<li><a href="#!"><img src="images/snapchat.png">AstritiSnapchat</a></li> !-->
       <li><div class="divider"></div></li>
     <li><a class="subheader">Shpërndaje</a></li>
     <li>
@@ -64,24 +100,24 @@
 <div class="slider fullscreen">
   <ul class="slides">
     <li>
-      <img src="images/1.jpg"> <!-- random image -->
+      <img src="<cms:show image_1/>"> 
       <div class="caption center-align">
-        <h3>Astrit Istogu</h3>
-        <h5 class="light grey-text text-lighten-3">Photography</h5>
+        <h3><cms:show image_1_text/></h3>
+        <h5 class="light grey-text text-lighten-3"></h5>
       </div>
     </li>
     <li>
-      <img src="images/2.jpg"> <!-- random image -->
+      <img src="<cms:show image_2/>"> 
       <div class="caption left-align">
-        <h3>Galeria</h3>
+        <h3><cms:show image_2_text/></h3>
         <a href="#" data-activates="slide-out" class="btn button-collapse waves-light purple darken-4">Kontakti</a>
         
       </div>
     </li>
     <li>
-      <img src="images/3.jpg"> <!-- random image -->
+      <img src="<cms:show image_3/>"> 
       <div class="caption right-align">
-        <h3>Test</h3>
+        <h3><cms:show image_3_text/></h3>
         <h5 class="light grey-text text-lighten-3">Instagram</h5>
       </div>
     </li>
@@ -95,13 +131,23 @@
       <i class="large material-icons">picture_in_picture</i>
     </a>
     <ul>
-      <li class="waves-effect waves-light"><a href=""><i class="material-icons"></i>Matura</a></li>
-      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons"></i>Natyra</a></li>
-      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons"></i>Portrete</a></li>
-      <li class="waves-effect waves-light"><a href="gallery.html"><i class="material-icons"></i>Instagram</a></li>
+    <!--<li class="waves-effect waves-light">  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Dergo email</a></li>!-->
+      <li class="waves-effect waves-light"><a href="galeria.php"><i class="material-icons"></i>Galeria</a></li>
+      <li class="waves-effect waves-light"><a href="https://www.instagram.com/astritistoguphotography/" target='_BLANK'><i class="material-icons"></i>Instagram</a></li>
     </ul>
   </div>
 
+
+  <!-- Modal Structure 
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>-->
 
 
 
@@ -115,15 +161,17 @@
     $(document).ready(function(){
       $('.slider').slider({transition:300,interval:10000,indicators:true});
     });
-
+ 
  $('.button-collapse').sideNav({
       menuWidth: 300, // Default is 300
       edge: 'left', // Choose the horizontal origin
       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true
  });
+ $('.modal').modal();
       
 </script>
 
   </body>
 </html>
+<?php COUCH::invoke(); ?>
