@@ -87,7 +87,7 @@
     <cms:show_repeatable 'galeria'>
       <div class="gallery"><a href="<cms:show images/>" data-fancybox="group" data-fancybox data-caption="<cms:show description/>"><img src="<cms:show images/>" alt="<cms:show description/>" /></a></cms:show_repeatable>
     <div
-      class="fixed-action-btn1"><a href="index.php" class="btn-floating btn-large red"><i class="large material-icons">arrow_back</i></a></section>
+      class="fixed-action-btn1 "><a href="index.php" class="btn-floating btn-large red "><i class="large material-icons">arrow_back</i></a></section>
   <!-- JS -->
   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="\fancybox\dist\jquery.fancybox.min.js"></script>

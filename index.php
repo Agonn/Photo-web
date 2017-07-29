@@ -43,11 +43,12 @@
 </head>
 
 <body>
-  <!-- nav !-->
+  <!-- NAV !-->
   <ul id="slide-out" style="z-index: 10001;" class="side-nav">
     <li>
       <div class="user-view">
-        <div class="background"><img src="http://i.imgur.com/WeXE1wq.png"></div><a href="#!user"><img class="circle" src="https://instagram.fprx1-1.fna.fbcdn.net/t51.2885-19/s150x150/18646100_295846277535127_6500728101108973568_a.jpg"></a>
+        <div class="background"><img src="http://i.imgur.com/WeXE1wq.png"></div>
+        <a href="#!user"><img class="circle" src="https://instagram.fprx1-1.fna.fbcdn.net/t51.2885-19/s150x150/18646100_295846277535127_6500728101108973568_a.jpg"></a>
         <a href="#"><span class="white-text name">Astrit Istogu</span></a>
       </div>
     </li>
@@ -75,45 +76,45 @@
       </script>
     </li>
     <li><a href="whatsapp://send?text=http://astritistogu.com" data-action="share/whatsapp/share"><img src="images/whatsapp.png">Whatsapp</a></li>
-  </ul><a href="#" data-activates="slide-out" style="position: absolute;
+  </ul><a href="#" data-activates="slide-out" style="position: fixed;
  z-index: 10000" class="button-collapse"><i class="medium material-icons">menu</i></a>
   <!-- /Nav !-->
-  <!-- Content !-->
-  <div class="slider-adjustment">
-    <div class="slider fullscreen">
-      <ul class="slides">
-        <li><img src="<cms:show image_1/>">
-          <div class="caption center-align">
-            <h3>
-              <cms:show image_1_text/>
-            </h3>
-            <h5 class="light grey-text text-lighten-3"></h5>
-          </div>
-        </li>
-        <li><img src="<cms:show image_2/>">
-          <div class="caption left-align">
-            <h3>
-              <cms:show image_2_text/>
-            </h3><a href="#" data-activates="slide-out" class="btn button-collapse waves-light purple darken-4">Kontakti</a></div>
-        </li>
-        <li><img src="<cms:show image_3/>">
-          <div class="caption right-align">
-            <h3>
-              <cms:show image_3_text/>
-            </h3>
-            <h5 class="light grey-text text-lighten-3">Instagram</h5>
-          </div>
-        </li>
-      </ul>
+
+<!-- Content !-->
+ <div class="section red">
+    <div class="row container">
+      <h2 class="header">Test</h2>
+      <p class="grey-text text-darken-3 lighten-3">More test</p>
     </div>
-    <!-- /Content !-->
-    <div class="fixed-action-btn toolbar "><a class="btn-floating btn-large red purple darken-4"><i class="large material-icons">picture_in_picture</i></a>
+  </div>
+   <div class="parallax-container">
+    <div class="parallax"><img src="<cms:show image_1/>"></div>
+  </div>
+  <div class="section green">
+    <div class="row container">
+      <h2 class="header">Test</h2>
+      <p class="grey-text text-darken-3 lighten-3">More test</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="<cms:show image_2/>"></div>
+  </div>
+<div class="row container">
+      <h2 class="header">Test</h2>
+      <p class="grey-text text-darken-3 lighten-3">More test</p>
+    </div>
+   <div class="parallax-container">
+    <div class="parallax"><img src="<cms:show image_3/>"></div>
+  </div>
+    
+    <div class="fixed-action-btn toolbar  "><a class="btn-floating btn-large red purple darken-4 "><i class="large material-icons">picture_in_picture</i></a>
       <ul>
         <!--<li class="waves-effect waves-light"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Dergo email</a></li> !-->
         <li class="waves-effect waves-light"><a href="https://www.instagram.com/astritistoguphotography/" target='_BLANK'><i class="material-icons"></i>Instagram</a></li>
         <li class="waves-effect waves-light"><a href="galeria.php"><i class="material-icons"></i>Galeria</a></li>
       </ul>
     </div>
+<!-- /Content !-->
     <!-- Modal 
      <div id="modal1" class="modal bottom-sheet"><div class="modal-content"> <form method="post" id="myForm">
           <div class="form-group">
@@ -133,7 +134,10 @@
             <textarea class="form-control" id="comment" name="comment" required></textarea>
           </div>
           <input type="submit"  onclick="myFunction()" name="submit" class="btn btn-success btn-lg" value="Submit">
-        </form><div class="modal-footer"></div></div>-->
+        </form><div class="modal-footer"></div></div>
+        
+        !Modal -->
+        
     <!-- Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
@@ -145,21 +149,19 @@
             interval: 10000,
             indicators: true
           });
-        }
+        });
 
-      );
       $('.button-collapse').sideNav({
           menuWidth: 300, // Default is 300
           edge: 'left', // Choose the horizontal origin
           closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
           draggable: true
-        }
-
-      );
+        });
       $('.modal').modal();
-    </script>
+      $('.parallax').parallax();
+</script>
+    <!-- Scripts-->
 </body>
-
 </html>
 <?php COUCH::invoke();
 ?>
