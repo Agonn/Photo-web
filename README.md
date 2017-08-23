@@ -4,6 +4,9 @@ Custom back-end with *CouchCMS*
 
 Screenshots:
 
-http://i.imgur.com/nroPYxj.jpg 
+http://i.imgur.com/wG0BfQV.jpg
 
 
+Custom CMS:
+
+http://i.imgur.com/zQJLvCM.png
